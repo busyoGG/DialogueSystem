@@ -122,6 +122,7 @@ public class RootScript : MonoBehaviour
             {
                 _start.gameObject.SetActive(true);
                 _dialoguePanel.SetActive(false);
+                DialogueManager.Instance().ClearRecordedDialogue();
             }
 
             if (_isAuto)
@@ -184,6 +185,7 @@ public class RootScript : MonoBehaviour
         {
             _start.gameObject.SetActive(true);
             _dialoguePanel.SetActive(false);
+            DialogueManager.Instance().ClearRecordedDialogue();
         }
     }
 }

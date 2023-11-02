@@ -157,4 +157,11 @@ public class DialogueManager
     {
         return _record;
     }
+    /// <summary>
+    /// 清除对话记录
+    /// </summary>
+    public void ClearRecordedDialogue()
+    {
+        _record.Clear();
+    }
 }
