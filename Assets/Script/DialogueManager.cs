@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class DialogueManager
 {
@@ -29,12 +27,14 @@ public class DialogueManager
         d1.id = 0;
         d1.d_id = 0;
         d1.content = "第一条对话";
+        d1.target = "NPC";
         d1.autoSpeed = 2;
 
         DialogueTree d2 = new DialogueTree();
         d2.id = 1;
         d2.d_id = 0;
         d2.content = "第二条对话";
+        d2.target = "NPC";
         d2.autoSpeed = 2;
         d2.selection.Add("选项1");
         d2.selection.Add("选项2");
@@ -43,12 +43,14 @@ public class DialogueManager
         d3.id = 2;
         d3.d_id = 0;
         d3.content = "第三条对话";
+        d3.target = "NPC";
         d3.autoSpeed = 2;
 
         DialogueTree d4 = new DialogueTree();
         d4.id = 3;
         d4.d_id = 0;
         d4.content = "第四条对话";
+        d4.target = "Player";
         d4.autoSpeed = 2;
 
         d1.next.Add(d2);
@@ -74,6 +76,15 @@ public class DialogueManager
     public string GetContent()
     {
         return _curDialogue?.content;
+    }
+
+    /// <summary>
+    /// 获取对话人
+    /// </summary>
+    /// <returns></returns>
+    public string GetTarget()
+    {
+        return _curDialogue?.target;
     }
 
     /// <summary>

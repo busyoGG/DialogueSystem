@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class DialogueTree
 {
@@ -12,6 +10,10 @@ public class DialogueTree
     /// 对话id，用来判断所属对话树
     /// </summary>
     public int d_id { get; set; }
+    /// <summary>
+    /// 对话人
+    /// </summary>
+    public string target { get; set; }
     /// <summary>
     /// 内容
     /// </summary>

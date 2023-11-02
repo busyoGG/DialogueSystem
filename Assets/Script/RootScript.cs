@@ -19,6 +19,8 @@ public class RootScript : MonoBehaviour
 
     public Button _record;
 
+    public TextMeshProUGUI _target;
+
     public GameObject _dialoguePanel;
     //UI¿Ø¼þ -----end
 
@@ -57,6 +59,7 @@ public class RootScript : MonoBehaviour
     {
         _content.text = DialogueManager.Instance().GetContent();
         DialogueManager.Instance().RecordDialogue(_content.text);
+        _target.text = DialogueManager.Instance().GetTarget();
 
         List<string> selections = DialogueManager.Instance().GetSelection();
         if (selections.Count > 0)
